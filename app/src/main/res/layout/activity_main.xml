@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tck.suspensionview.MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#ddd"
+            android:dividerHeight="1dp"/>
+
+        <LinearLayout
+            android:id="@+id/suspension_ll"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="#fff"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="54dp">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/ongoing_tv1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="进行中"
+                        android:textColor="@color/color_selector"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:id="@+id/ongoing_line1"
+                        android:layout_width="20dp"
+                        android:layout_height="1.5dp"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:background="@android:color/holo_green_light"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/over_tv1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="已结束"
+                        android:textColor="@color/color_selector"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:id="@+id/over_line1"
+                        android:layout_width="20dp"
+                        android:layout_height="1.5dp"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:background="@android:color/holo_green_light"
+                        android:visibility="invisible"/>
+                </FrameLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#ddd"/>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>
